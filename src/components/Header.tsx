@@ -76,7 +76,7 @@ export default function Header() {
           />
         </div>
 
-        <div style={styles.center}>Evergreen Data</div>
+        <div style={styles.center}>Evergreen-Data</div>
 
         <div style={{ ...styles.side, justifyContent: 'flex-end' }}>
           {isLoggedIn ? (
