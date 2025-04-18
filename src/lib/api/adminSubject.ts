@@ -1,4 +1,6 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+import { getApiUrl } from "../getApi";
+
+const BASE_URL = getApiUrl();
 
 
 const authHeader = () => ({

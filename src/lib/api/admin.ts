@@ -1,7 +1,8 @@
 import { SubjectFull } from "@/types/SubjectFull";
 import { User } from "@/types/User";
+import { getApiUrl } from "../getApi";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+const BASE_URL = getApiUrl();
 
 export async function invalidateUser(userId: number): Promise<void> {
     const res = await fetch(`${BASE_URL}api/admin/invalid`, {

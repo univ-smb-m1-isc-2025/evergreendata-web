@@ -1,7 +1,9 @@
 import { Subject } from "@/types/Subject";
 import { SubjectFull } from "@/types/SubjectFull";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+import { getApiUrl } from "../getApi";
+
+const API_BASE = getApiUrl();
 
 export async function getAllSubjects(): Promise<Subject[]> {
   const res = await fetch(`${API_BASE}api/subject/all`);

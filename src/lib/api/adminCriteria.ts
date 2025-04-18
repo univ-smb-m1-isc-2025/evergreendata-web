@@ -1,6 +1,8 @@
 import { Criteria } from "@/types/Criteria";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+import { getApiUrl } from "../getApi";
+
+const BASE_URL = getApiUrl();
 
 export async function getAllCriteria(): Promise<Criteria[]> {
     const res = await fetch(`${BASE_URL}api/admin/criteria/all`, {

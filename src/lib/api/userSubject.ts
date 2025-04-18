@@ -2,7 +2,9 @@ import { Subject } from '@/types/Subject';
 import { SubjectCriteria } from '@/types/SubjectCriteria';
 import { getToken } from '@/lib/local';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api";
+import { getApiUrl } from "../getApi";
+
+const API_BASE = getApiUrl();
 
 export async function getJoinedSubjects(): Promise<Subject[]> {
   const token = getToken();

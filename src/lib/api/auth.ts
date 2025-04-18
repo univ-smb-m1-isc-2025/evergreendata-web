@@ -1,6 +1,8 @@
 import { LogInBody, SignInBody, Token } from "@/types/Auth";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL;
+import { getApiUrl } from "../getApi";
+
+const API_BASE = getApiUrl();
 
 export async function signIn(data: SignInBody): Promise<Token> {
   const res = await fetch(`${API_BASE}api/auth/signIn`, {
